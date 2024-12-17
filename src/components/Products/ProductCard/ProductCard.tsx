@@ -1,3 +1,5 @@
+"use client";
+
 import { Product } from "../../../types/Product";
 import styles from "./ProductCard.module.css";
 import sharedStyles from "../../../styles/shared.module.css";
