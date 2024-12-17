@@ -54,13 +54,17 @@ const ProductsPage = () => {
         className={sharedStyles.grid}
         role="list"
       >
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onDelete={handleDeleteProduct}
-          />
-        ))}
+        {products.length ? (
+          products.map((product) => (
+            <ProductCard
+              key={product?.id}
+              product={product}
+              onDelete={handleDeleteProduct}
+            />
+          ))
+        ) : (
+          <></>
+        )}
       </section>
       <Modal
         isOpen={isModalOpen}
