@@ -9,6 +9,9 @@ interface ProductCardProps {
   onDelete: (id: string) => void;
 }
 
+const DEFAULT_IMAGE_URL =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cSGzVkaZvJD5722MU5A-JJt_T5JMZzotcw&s";
+
 const ProductCard = ({ product, onDelete }: ProductCardProps) => {
   return (
     <article
@@ -17,10 +20,7 @@ const ProductCard = ({ product, onDelete }: ProductCardProps) => {
       role="listitem"
     >
       <img
-        src={
-          product.image ||
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cSGzVkaZvJD5722MU5A-JJt_T5JMZzotcw&s"
-        }
+        src={product.image || DEFAULT_IMAGE_URL}
         alt={product.image ? product.name : "Placeholder image for product"}
         className={styles.image}
       />

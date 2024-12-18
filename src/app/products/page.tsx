@@ -5,12 +5,12 @@ import Modal from "../../components/common/Modal/Modal";
 import AddProductForm from "../../components/Products/AddProductForm/AddProductForm";
 import ProductCard from "../../components/Products/ProductCard/ProductCard";
 import { Product } from "../../types/Product";
-import sharedStyles from "../../styles/shared.module.css";
 import {
   addProduct,
   deleteProduct,
   getAllProducts,
-} from "@/utils/api_utils/products";
+} from "../../utils/api_utils/products";
+import sharedStyles from "../../styles/shared.module.css";
 
 const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -40,7 +40,7 @@ const ProductsPage = () => {
   return (
     <main className={sharedStyles.container}>
       <header className={sharedStyles.header}>
-        <h1>Product List</h1>
+        <h1 id="product-list">Product List</h1>
         <button
           onClick={() => setIsModalOpen(true)}
           className={`${sharedStyles.button} ${sharedStyles["button--primary"]}`}

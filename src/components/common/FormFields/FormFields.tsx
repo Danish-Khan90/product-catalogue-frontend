@@ -41,6 +41,7 @@ const FormField = ({
           required={required}
           onChange={onChange}
           autoFocus={isAutofocus}
+          aria-required={required}
         />
       ) : (
         <input
@@ -54,6 +55,7 @@ const FormField = ({
           min={min}
           onChange={onChange}
           autoFocus={isAutofocus}
+          aria-required={required}
         />
       )}
     </div>

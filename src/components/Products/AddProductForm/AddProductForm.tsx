@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./AddProductForm.module.css";
-import sharedStyles from "../../../styles/shared.module.css";
 import { Product } from "@/types/Product";
 import FormField from "@/components/common/FormFields/FormFields";
+import styles from "./AddProductForm.module.css";
+import sharedStyles from "../../../styles/shared.module.css";
 
 interface AddProductFormProps {
   onSubmit: (product: Product) => void;

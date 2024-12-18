@@ -1,28 +1,24 @@
-/* Row for Name and Price fields */
 .row {
   display: flex;
   justify-content: space-between;
-  gap: 2.5rem; /* 40px -> 2.5rem for consistency */
+  gap: 2.5rem;
 }
 
-/* Buttons container */
 .buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem; /* 15px -> 1rem for spacing between buttons */
+  gap: 1rem;
 }
 
-/* Buttons styling */
 .buttons button {
-  width: 6.25rem; /* 100px -> 6.25rem */
-  padding: 0.625rem; /* 10px -> 0.625rem */
-  font-size: 0.875rem; /* 14px -> 0.875rem */
+  width: 6.25rem;
+  padding: 0.625rem;
+  font-size: 0.875rem;
 }
 
-/* Responsive behavior for Name and Price fields */
 @media (max-width: 600px) {
   .row {
-    flex-direction: column; /* Stack fields vertically */
-    gap: 0.625rem; /* 10px -> 0.625rem */
+    flex-direction: column;
+    gap: 0.625rem;
   }
 }

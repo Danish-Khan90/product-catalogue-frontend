@@ -1,35 +1,33 @@
-/* Modal overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Modal container */
 .modal {
   background: #ffffff;
-  border-radius: 0.75rem; /* 12px -> 0.75rem */
-  padding: 2rem; /* 32px -> 2rem */
-  width: 90%; /* Take up most of the width on smaller screens */
-  max-width: 31.25rem; /* 500px -> 31.25rem */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 4px 8px -> rem */
+  border-radius: 0.75rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 31.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  animation: fadeIn 0.3s ease; /* Optional: Add animation */
+  animation: fadeIn 0.3s ease;
   z-index: 1001;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-0.625rem); /* 10px -> 0.625rem */
+    transform: translateY(-0.625rem);
   }
   to {
     opacity: 1;
@@ -37,39 +35,34 @@
   }
 }
 
-/* Modal header */
 .modalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.75rem; /* 28px -> 1.75rem */
-  border-bottom: 0.0625rem solid #e0e0e0; /* 1px -> 0.0625rem */
-  padding-bottom: 0.75rem; /* 12px -> 0.75rem */
+  margin-bottom: 1.75rem;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  padding-bottom: 0.75rem;
 }
 
 .modalHeader h2 {
-  font-size: 1.375rem; /* 22px -> 1.375rem */
-  font-weight: bold;
-  margin: 0;
+  font-size: 1.375rem;
 }
 
-/* Close button */
 .crossButton {
   background: none;
   border: none;
-  font-size: 1.625rem; /* 26px -> 1.625rem */
+  font-size: 1.625rem;
   color: #757575;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
 .crossButton:hover {
-  color: #d32f2f; /* Red hover effect */
+  color: #d32f2f;
 }
 
-/* Modal content */
 .modalContent {
-  max-height: calc(100vh - 9.375rem); /* 150px -> 9.375rem */
+  max-height: calc(100vh - 9.375rem);
   overflow-y: auto;
-  padding-right: 0.5rem; /* 8px -> 0.5rem */
+  padding-right: 0.5rem;
 }
